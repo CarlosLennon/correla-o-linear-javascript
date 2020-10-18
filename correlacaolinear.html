@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head> 
+<meta charset="UTF-8">
+<meta name="autor" content="Carlos Lennon">
+</head>
+<body>
+
+ <script>
+ let qtdpart=parseInt(prompt('Quantidade de elementos do vetor'))
+ let valorX=[]
+ let valory=[]
+ let i;
+ for(i=0;i<qtdpart;i++){
+     valorX[i]=parseInt(prompt('Digite valor do x'))
+     valorY[i]=parseInt(prompt('Digite valor do y'))
+ }
+ document.write("valores do X"+valorX+"/ ")
+ document.write("valores do y"+valorY+"/ ")
+
+ let somaX=valorX.reduce((total,currentElement)=>total+currentElement)
+ let somaY=valorY.reduce((total,currentElement)=>total+currentElement)
+
+ document.write("Soma dos valores X e Y"+somaX+ "e"+somaY+"/ ")
+
+ let multiplicacaoXY=[]
+ for(i=0;i<qtdpart;i++){
+     multiplicacaoXY[i]=valorX[i]*valory[i]
+ }
+ document.write("XY: "+multiplicacaoXY+"/ ")
+ let somaXY= multiplicacaoXY.reduce((total, customElements)=> total + currentElement)
+ document.write("soma de valores XY:" +somaXY+"/ ")
+
+ multiplicacaoX=[]
+ for( i=0;i<qtdpart;i++){
+     multiplicacaoX=valorX[i]*valorX[i]
+    
+ }
+ document.write("X2:"+ multiplicacaoX+"/ " )
+
+ let somaX2= multiplicacaoX.reduce((total, currentElement)=>total+customElements)
+ document.write("soma de valores X2"+somaX2+"/ ")
+ multiplicacaoY=[]
+ for( i=0;i<qtdpart;i++){
+     multiplicacaoY=valory[i]*valory[i]
+    
+ }
+ document.write("X2:"+ multiplicacaoY+"/ " )
+
+ let somaY2= multiplicacaoY.reduce((total, currentElement)=>total+customElements)
+ document.write("soma de valores Y2"+somaY2+"/ ")
+
+ let parteDeCimaDaFracao=(qtdpart * somaXY) - (somaY* somaX)
+ let parteDeBaixoDaFracao=((qtdpart*somaXY)-(somaY* somaX)) * ((qtdpart*somaY2)-(somaY*somaY))
+ 
+ </script>
+
+
+
+</body></html>
